@@ -1,0 +1,17 @@
+{
+    "Main" : {
+      "title" : {
+        "type" : "StructuredText",
+        "config" : {
+          "single" : "heading1",
+          "label" : "Title"
+        }
+      },
+      "title_colour" : {
+        "type" : "Color",
+        "config" : {
+          "label" : "Title Colour"
+        }
+      }
+    }
+  }
