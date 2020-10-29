@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -23,7 +27,7 @@ module.exports = {
       // You can generate an access token in the "API & Security" section of
       // your repository settings. Setting a "Callback URL" is not necessary.
       // The token will be listed under "Permanent access tokens".
-      accessToken: 'MC5YNWlFb1JBQUFCNEFnY0pJ.Me-_ve-_vTjvv70GeO-_vQdv77-9Ee-_ve-_ve-_vTfvv71SAu-_vWhL77-977-977-977-9MnNnfe-_vTQ',
+      accessToken: process.env.PRISMIC_ACCESS_TOKEN,
       schemas: {
         home: require("./src/schemas/home.json"),
       },
